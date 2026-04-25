@@ -29,8 +29,22 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Supabase (Backend)
+This project uses Supabase for the database, authentication, and storage.
+- Follow the [Supabase Setup Guide](./SUPABASE_SETUP.md) to initialize your database and storage buckets.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2. Render (Frontend)
+The frontend is built with Next.js and is ready to be deployed on Render.
+- Connect your GitHub repository to [Render](https://render.com).
+- Create a new **Web Service**.
+- Use the following settings (already defined in `render.yaml`):
+  - **Runtime**: `Node`
+  - **Build Command**: `npm run build`
+  - **Start Command**: `npm run start`
+- Add the required environment variables:
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  - `SUPABASE_SERVICE_ROLE_KEY`
+
