@@ -12,7 +12,7 @@ export default async function HighlightsPage() {
     .order('created_at', { ascending: false })
 
   // Filter for highlights (includes 'highlight', 'both', or entries missing the type)
-  const highlights = allHighlights?.filter(h => !h.video_type || h.video_type === 'highlight' || h.video_type === 'both') || []
+  const highlights = (allHighlights as any[])?.filter(h => !h.video_type || h.video_type === 'highlight' || h.video_type === 'both') || []
 
   return (
     <MediaExplorer 

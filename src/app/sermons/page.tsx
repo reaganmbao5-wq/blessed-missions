@@ -12,7 +12,7 @@ export default async function SermonsPage() {
     .order('created_at', { ascending: false })
 
   // Filter for sermons (includes 'sermon', 'both', or entries missing the type)
-  const sermons = allHighlights?.filter(h => !h.video_type || h.video_type === 'sermon' || h.video_type === 'both') || []
+  const sermons = (allHighlights as any[])?.filter(h => !h.video_type || h.video_type === 'sermon' || h.video_type === 'both') || []
 
   return (
     <MediaExplorer 
