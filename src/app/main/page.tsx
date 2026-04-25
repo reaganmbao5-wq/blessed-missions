@@ -31,11 +31,11 @@ export default async function Home() {
     { data: baptismData },
     { data: testimonyData }
   ] = await Promise.all([
-    supabase.from('site_content').select('content_url').eq('section', 'hero_images').eq('is_active', true).eq('campus', 'kabwe'),
-    supabase.from('site_content').select('content_url').eq('section', 'landing_worship').eq('is_active', true).eq('campus', 'kabwe'),
-    supabase.from('site_content').select('content_url').eq('section', 'landing_groups').eq('is_active', true).eq('campus', 'kabwe'),
-    supabase.from('site_content').select('content_url').eq('section', 'landing_baptisms').eq('is_active', true).eq('campus', 'kabwe'),
-    supabase.from('testimonies').select('*').eq('campus', 'kabwe')
+    supabase.from('site_content').select('content_url').eq('section', 'hero_images').eq('is_active', true).eq('campus', 'main'),
+    supabase.from('site_content').select('content_url').eq('section', 'landing_worship').eq('is_active', true).eq('campus', 'main'),
+    supabase.from('site_content').select('content_url').eq('section', 'landing_groups').eq('is_active', true).eq('campus', 'main'),
+    supabase.from('site_content').select('content_url').eq('section', 'landing_baptisms').eq('is_active', true).eq('campus', 'main'),
+    supabase.from('testimonies').select('*').eq('campus', 'main')
   ])
 
   const heroImages = (heroData as any[])?.length ? (heroData as any[]).map(d => d.content_url) : FALLBACK_HERO
@@ -48,7 +48,7 @@ export default async function Home() {
     <div className="flex flex-col min-h-screen bg-mariners-cream">
       {/* Hero Section */}
       <HeroSection 
-        title="Blessed Mission Town Campus" 
+        title="Blessed Mission Main Campus" 
         subtitle="Serving to save a soul. Join a vibrant community of students and young professionals."
         images={heroImages}
       />
