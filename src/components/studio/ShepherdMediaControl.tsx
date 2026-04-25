@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 import { toast } from 'sonner'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, Calendar as CalendarIcon, X, ChevronLeft, ChevronRight, Filter, SearchX, CalendarDays as CalendarDaysIcon } from 'lucide-react'
+import { Search, Calendar, Calendar as CalendarIcon, X, ChevronLeft, ChevronRight, Filter, SearchX, CalendarDays as CalendarDaysIcon, Star, Trash2, Image as ImageIcon, Video, Loader2, Clock, ChevronDown } from 'lucide-react'
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSunday, addMonths, subMonths, isSameDay } from 'date-fns'
 import ConfirmDialog from '../ui/ConfirmDialog'
 
