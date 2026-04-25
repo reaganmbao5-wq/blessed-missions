@@ -73,6 +73,7 @@ export interface Database {
           description: string | null
           campus: 'kabwe' | 'main'
           is_featured: boolean
+          video_type: 'sermon' | 'highlight' | 'both'
           created_at: string
         }
         Insert: {
@@ -83,6 +84,7 @@ export interface Database {
           description?: string | null
           campus: 'kabwe' | 'main'
           is_featured?: boolean
+          video_type?: 'sermon' | 'highlight' | 'both'
           created_at?: string
         }
         Update: {
@@ -93,6 +95,7 @@ export interface Database {
           description?: string | null
           campus?: 'kabwe' | 'main'
           is_featured?: boolean
+          video_type?: 'sermon' | 'highlight' | 'both'
           created_at?: string
         }
       }
