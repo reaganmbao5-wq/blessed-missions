@@ -373,7 +373,7 @@ export default function MediaManager({ campus, initialCategory = 'gallery', onCl
             { id: 'gallery', label: 'Gallery', icon: ImageIcon },
             { id: 'sermon', label: 'Sermons', icon: FileVideo },
             { id: 'highlight', label: 'Snippets', icon: Video },
-            { id: 'event', label: 'Events', icon: Calendar },
+            { id: 'event', label: 'Events', icon: CalendarIcon },
             { id: 'hero', label: 'Hero', icon: Upload },
             { id: 'landing_box', label: 'Modules', icon: Upload },
           ].map((cat) => (
